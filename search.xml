@@ -4,9 +4,9 @@
   
     
     <entry>
-      <title><![CDATA[Hello Blog]]></title>
-      <url>http://zjw7sky.github.io/2016/06/01/hello-world/</url>
-      <content type="html"><![CDATA[<p>Welcome to my blog！zjw7sky.</p>
+      <title></title>
+      <url>http://zjw7sky.github.io/2016/06/01/Hello%20Blog/</url>
+      <content type="html"><![CDATA[<h1 id="Hello-Blog"><a href="#Hello-Blog" class="headerlink" title="Hello Blog"></a>Hello Blog</h1><p>Hello Blog ！</p>
 ]]></content>
     </entry>
     
