@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title><![CDATA[NSString引用计数小计]]></title>
+      <url>http://zjw7sky.github.io/2016/06/02/NSString%E5%BC%95%E7%94%A8%E8%AE%A1%E6%95%B0%E5%B0%8F%E8%AE%A1/</url>
+      <content type="html"><![CDATA[<ul>
+<li><p>字符串常量引用计数 <strong>-1</strong></p>
+<pre><code>//引用计数为-1
+NSString *test1 = @&quot;&quot;;
+NSString *test2 = [[NSString alloc]init];
+NSString *test3 = [NSString stringWithFormat:@&quot;test&quot;];
+</code></pre></li>
+</ul>
+<ul>
+<li>字符串变量引用计数 符合NSObject的引用计数规则</li>
+</ul>
+<pre><code>//引用计数为1
+NSString *test4 = [NSString stringWithString:[NSString stringWithFormat:@&quot;test-%d&quot;,4]];
+</code></pre>]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Hello Blog]]></title>
       <url>http://zjw7sky.github.io/2016/06/01/Hello%20Blog/</url>
       <content type="html"><![CDATA[<p>Hello Blog ！</p>

@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zjw7sky.github.io/"/>
-  <updated>2016-06-02T06:29:18.000Z</updated>
+  <updated>2016-06-02T09:56:02.000Z</updated>
   <id>http://zjw7sky.github.io/</id>
   
   <author>
@@ -16,11 +16,48 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>NSString引用计数小计</title>
+    <link href="http://zjw7sky.github.io/2016/06/02/NSString%E5%BC%95%E7%94%A8%E8%AE%A1%E6%95%B0%E5%B0%8F%E8%AE%A1/"/>
+    <id>http://zjw7sky.github.io/2016/06/02/NSString引用计数小计/</id>
+    <published>2016-06-02T09:54:02.000Z</published>
+    <updated>2016-06-02T09:56:02.000Z</updated>
+    
+    <content type="html">&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;字符串常量引用计数 &lt;strong&gt;-1&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;//引用计数为-1
+NSString *test1 = @&amp;quot;&amp;quot;;
+NSString *test2 = [[NSString alloc]init];
+NSString *test3 = [NSString stringWithFormat:@&amp;quot;test&amp;quot;];
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;字符串变量引用计数 符合NSObject的引用计数规则&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;//引用计数为1
+NSString *test4 = [NSString stringWithString:[NSString stringWithFormat:@&amp;quot;test-%d&amp;quot;,4]];
+&lt;/code&gt;&lt;/pre&gt;</content>
+    
+    <summary type="html">
+    
+      &lt;ul&gt;
+&lt;li&gt;&lt;p&gt;字符串常量引用计数 &lt;strong&gt;-1&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;//引用计数为-1
+NSString *test1 = @&amp;quot;&amp;quot;;
+NSString *test2 = [[NSString alloc]init]
+    
+    </summary>
+    
+      <category term="iOS" scheme="http://zjw7sky.github.io/categories/iOS/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>Hello Blog</title>
     <link href="http://zjw7sky.github.io/2016/06/01/Hello%20Blog/"/>
     <id>http://zjw7sky.github.io/2016/06/01/Hello Blog/</id>
     <published>2016-06-01T04:00:00.000Z</published>
-    <updated>2016-06-02T06:29:18.000Z</updated>
+    <updated>2016-06-02T09:54:41.000Z</updated>
     
     <content type="html">&lt;p&gt;Hello Blog ！&lt;/p&gt;
 </content>
