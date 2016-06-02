@@ -84,15 +84,25 @@
 
 
 
-<meta name="description" content="Free space of zjw7sky">
-<meta property="og:type" content="website">
-<meta property="og:title" content="zjw7sky">
-<meta property="og:url" content="http://zjw7sky.github.io/categories/iOS/index.html">
+<meta name="description" content="Mac系统调整Launchpad图标大小运行“终端”程序，执行以下命令：
+
+调整每一列显示图标数量，7 表示每一列显示7个，在我的电脑上，7个个人觉得比较不错defaults write com.apple.dock springboard-rows -int 7
+调整每一行显示图标数量，这里我用的是8defaults write com.apple.dock springboard-column">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Mac使用小技巧">
+<meta property="og:url" content="http://zjw7sky.github.io/2016/06/02/Mac使用小技巧/index.html">
 <meta property="og:site_name" content="zjw7sky">
-<meta property="og:description" content="Free space of zjw7sky">
+<meta property="og:description" content="Mac系统调整Launchpad图标大小运行“终端”程序，执行以下命令：
+
+调整每一列显示图标数量，7 表示每一列显示7个，在我的电脑上，7个个人觉得比较不错defaults write com.apple.dock springboard-rows -int 7
+调整每一行显示图标数量，这里我用的是8defaults write com.apple.dock springboard-column">
+<meta property="og:updated_time" content="2016-06-02T10:25:40.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="zjw7sky">
-<meta name="twitter:description" content="Free space of zjw7sky">
+<meta name="twitter:title" content="Mac使用小技巧">
+<meta name="twitter:description" content="Mac系统调整Launchpad图标大小运行“终端”程序，执行以下命令：
+
+调整每一列显示图标数量，7 表示每一列显示7个，在我的电脑上，7个个人觉得比较不错defaults write com.apple.dock springboard-rows -int 7
+调整每一行显示图标数量，这里我用的是8defaults write com.apple.dock springboard-column">
 
 
 
@@ -110,7 +120,7 @@
   };
 </script>
 
-  <title> 分类: iOS | zjw7sky </title>
+  <title> Mac使用小技巧 | zjw7sky </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -131,7 +141,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -242,47 +252,187 @@
           <div id="content" class="content">
             
 
-  <section id="posts" class="posts-collapse">
-    <div class="collection-title">
-      <h2 >
-        iOS
-        <small>分类</small>
-      </h2>
-    </div>
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
 
     
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Mac使用小技巧
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-06-02T18:18:50+08:00" content="2016-06-02">
+              2016-06-02
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Mac/" itemprop="url" rel="index">
+                    <span itemprop="name">Mac</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/06/02/Mac使用小技巧/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/02/Mac使用小技巧/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
       
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+      
+        <h2 id="Mac系统调整Launchpad图标大小"><a href="#Mac系统调整Launchpad图标大小" class="headerlink" title="Mac系统调整Launchpad图标大小"></a>Mac系统调整Launchpad图标大小</h2><p>运行“终端”程序，执行以下命令：</p>
+<ol>
+<li>调整每一列显示图标数量，7 表示每一列显示7个，在我的电脑上，7个个人觉得比较不错<br><code>defaults write com.apple.dock springboard-rows -int 7</code></li>
+<li>调整每一行显示图标数量，这里我用的是8<br><code>defaults write com.apple.dock springboard-columns -int 8</code></li>
+<li>由于修改了每一页显示图标数量，可能需要重置Launchpad<br><code>defaults write com.apple.dock ResetLaunchPad -bool TRUE;killall Dock</code></li>
+</ol>
+<h2 id="让Dock自动-显示-隐藏-不再有延迟"><a href="#让Dock自动-显示-隐藏-不再有延迟" class="headerlink" title="让Dock自动 显示/隐藏 不再有延迟"></a>让Dock自动 显示/隐藏 不再有延迟</h2><p>可能很多朋友使用Mac的时候都会选择将Dock隐藏（可以在系统偏好设置-Dock中选择），等到使用的时候将光标向下一划Dock就会自动弹出显示了。这个显示或者隐藏会有一点点（似乎1秒左右）的延迟，使用下面的方法可以消除这个延迟：</p>
+<p>打开  应用程序-实用工具-终端<br>输入如下代码并回车：<br>    <code>defaults write com.apple.Dock autohide-delay -float 0 &amp;&amp; killall Dock</code><br>这样当Dock再次隐藏或者显示的时候就会立即执行的<br>如果想要恢复原来默认的延迟速度，就在终端输入如下代码并回车即可：<br>    <code>defaults delete com.apple.Dock autohide-delay &amp;&amp; killall Dock</code><br>看过网上一些文章技巧提到在终端用如下命令即可使Dock栏无延时弹出：<br>    <code>defaults write com.apple.Dock autohide-delay -float 0 &amp;&amp; killallDock</code><br>但实际上试验后发现并不起效果，甚是苦恼，且注销后再用<br>    <code>defaults read com.apple.Dock autohide-delay</code><br>发现这个值并不存在。</p>
+<p>后来多方试验并查询国外网站后发现关键点是要把float改为int即可，即使用如下命令：<br>    <code>defaults write com.apple.Dock autohide-delay -int 0 &amp;&amp; killall Dock</code><br>另外这个只是改善了弹出前的延时速度，若要改善弹出及隐藏的过程的动画的速度，则使用如下命令（这个命令在国内的网站上搜索不到）：<br>    <code>defaults write com.apple.dock autohide-time-modifier -int 0; killall Dock</code><br>以上命令将时间设置为0，将无动画效果，瞬间显示Dock栏。<br>我本人使用的是0.3秒：<br>    <code>defaults write com.apple.dock autohide-time-modifier -float 0.3;killall Dock</code><br>总结一下就是当要设置为0值时，需要用int，用小数时需要用float。<br>autohide-delay和autohide-time-modifier分别控制弹出前的延时和弹出动画的时间。</p>
 
-      <h1 class="post-title">
+      
+    </div>
+
+    <div>
+      
         
-            <a class="post-title-link" href="/2016/06/02/NSString引用计数小计/" itemprop="url">
-              
-                <span itemprop="name">NSString引用计数小计</span>
-              
-            </a>
+      
+    </div>
+
+    <div>
+      
         
-      </h1>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-06-02T17:54:02+08:00"
-              content="2016-06-02" >
-          06-02
-        </time>
-      </div>
+      
+    </div>
 
-    </header>
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/06/02/NSString引用计数小计/" rel="next" title="NSString引用计数小计">
+                <i class="fa fa-chevron-left"></i> NSString引用计数小计
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+        
+  <div class="bdsharebuttonbox">
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+    <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+    <a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a>
+    <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+    <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+    <a href="#" class="bds_more" data-cmd="more"></a>
+    <a class="bds_count" data-cmd="count"></a>
+  </div>
+  <script>
+    window._bd_share_config = {
+      "common": {
+        "bdText": "",
+        "bdMini": "2",
+        "bdMiniList": false,
+        "bdPic": ""
+      },
+      "share": {
+        "bdSize": "16",
+        "bdStyle": "0"
+      },
+      "image": {
+        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
+        "viewText": "分享到：",
+        "viewSize": "16"
+      }
+    }
+  </script>
 
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
 
 
           </div>
@@ -290,6 +440,14 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/06/02/Mac使用小技巧/"
+           data-title="Mac使用小技巧" data-url="http://zjw7sky.github.io/2016/06/02/Mac使用小技巧/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -309,8 +467,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.png"
@@ -373,6 +540,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Mac系统调整Launchpad图标大小"><span class="nav-number">1.</span> <span class="nav-text">Mac系统调整Launchpad图标大小</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#让Dock自动-显示-隐藏-不再有延迟"><span class="nav-number">2.</span> <span class="nav-text">让Dock自动 显示/隐藏 不再有延迟</span></a></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -476,6 +654,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 

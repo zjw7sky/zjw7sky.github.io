@@ -266,6 +266,134 @@
             
               
                 
+                <a class="post-title-link" href="/2016/06/02/Mac使用小技巧/" itemprop="url">
+                  Mac使用小技巧
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-06-02T18:18:50+08:00" content="2016-06-02">
+              2016-06-02
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Mac/" itemprop="url" rel="index">
+                    <span itemprop="name">Mac</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/06/02/Mac使用小技巧/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/02/Mac使用小技巧/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="Mac系统调整Launchpad图标大小"><a href="#Mac系统调整Launchpad图标大小" class="headerlink" title="Mac系统调整Launchpad图标大小"></a>Mac系统调整Launchpad图标大小</h2><p>运行“终端”程序，执行以下命令：</p>
+<ol>
+<li>调整每一列显示图标数量，7 表示每一列显示7个，在我的电脑上，7个个人觉得比较不错<br><code>defaults write com.apple.dock springboard-rows -int 7</code></li>
+<li>调整每一行显示图标数量，这里我用的是8<br><code>defaults write com.apple.dock springboard-columns -int 8</code></li>
+<li>由于修改了每一页显示图标数量，可能需要重置Launchpad<br><code>defaults write com.apple.dock ResetLaunchPad -bool TRUE;killall Dock</code></li>
+</ol>
+<h2 id="让Dock自动-显示-隐藏-不再有延迟"><a href="#让Dock自动-显示-隐藏-不再有延迟" class="headerlink" title="让Dock自动 显示/隐藏 不再有延迟"></a>让Dock自动 显示/隐藏 不再有延迟</h2><p>可能很多朋友使用Mac的时候都会选择将Dock隐藏（可以在系统偏好设置-Dock中选择），等到使用的时候将光标向下一划Dock就会自动弹出显示了。这个显示或者隐藏会有一点点（似乎1秒左右）的延迟，使用下面的方法可以消除这个延迟：</p>
+<p>打开  应用程序-实用工具-终端<br>输入如下代码并回车：<br>    <code>defaults write com.apple.Dock autohide-delay -float 0 &amp;&amp; killall Dock</code><br>这样当Dock再次隐藏或者显示的时候就会立即执行的<br>如果想要恢复原来默认的延迟速度，就在终端输入如下代码并回车即可：<br>    <code>defaults delete com.apple.Dock autohide-delay &amp;&amp; killall Dock</code><br>看过网上一些文章技巧提到在终端用如下命令即可使Dock栏无延时弹出：<br>    <code>defaults write com.apple.Dock autohide-delay -float 0 &amp;&amp; killallDock</code><br>但实际上试验后发现并不起效果，甚是苦恼，且注销后再用<br>    <code>defaults read com.apple.Dock autohide-delay</code><br>发现这个值并不存在。</p>
+<p>后来多方试验并查询国外网站后发现关键点是要把float改为int即可，即使用如下命令：<br>    <code>defaults write com.apple.Dock autohide-delay -int 0 &amp;&amp; killall Dock</code><br>另外这个只是改善了弹出前的延时速度，若要改善弹出及隐藏的过程的动画的速度，则使用如下命令（这个命令在国内的网站上搜索不到）：<br>    <code>defaults write com.apple.dock autohide-time-modifier -int 0; killall Dock</code><br>以上命令将时间设置为0，将无动画效果，瞬间显示Dock栏。<br>我本人使用的是0.3秒：<br>    <code>defaults write com.apple.dock autohide-time-modifier -float 0.3;killall Dock</code><br>总结一下就是当要设置为0值时，需要用int，用小数时需要用float。<br>autohide-delay和autohide-time-modifier分别控制弹出前的延时和弹出动画的时间。</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/06/02/NSString引用计数小计/" itemprop="url">
                   NSString引用计数小计
                 </a>
@@ -538,7 +666,7 @@ NSString *test4 = [NSString stringWithString:[NSString stringWithFormat:@&quot;t
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-count">3</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -546,7 +674,7 @@ NSString *test4 = [NSString stringWithString:[NSString stringWithFormat:@&quot;t
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
