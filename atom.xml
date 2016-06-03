@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zjw7sky.github.io/"/>
-  <updated>2016-06-02T10:25:40.000Z</updated>
+  <updated>2016-06-03T00:41:53.000Z</updated>
   <id>http://zjw7sky.github.io/</id>
   
   <author>
@@ -20,22 +20,23 @@
     <link href="http://zjw7sky.github.io/2016/06/02/Mac%E4%BD%BF%E7%94%A8%E5%B0%8F%E6%8A%80%E5%B7%A7/"/>
     <id>http://zjw7sky.github.io/2016/06/02/Mac使用小技巧/</id>
     <published>2016-06-02T10:18:50.000Z</published>
-    <updated>2016-06-02T10:25:40.000Z</updated>
+    <updated>2016-06-03T00:41:53.000Z</updated>
     
-    <content type="html">&lt;h2 id=&quot;Mac系统调整Launchpad图标大小&quot;&gt;&lt;a href=&quot;#Mac系统调整Launchpad图标大小&quot; class=&quot;headerlink&quot; title=&quot;Mac系统调整Launchpad图标大小&quot;&gt;&lt;/a&gt;Mac系统调整Launchpad图标大小&lt;/h2&gt;&lt;p&gt;运行“终端”程序，执行以下命令：&lt;/p&gt;
+    <content type="html">&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h2 id=&quot;Mac系统调整Launchpad图标大小&quot;&gt;&lt;a href=&quot;#Mac系统调整Launchpad图标大小&quot; class=&quot;headerlink&quot; title=&quot;Mac系统调整Launchpad图标大小&quot;&gt;&lt;/a&gt;Mac系统调整Launchpad图标大小&lt;/h2&gt;&lt;p&gt;运行“终端”程序，执行以下命令：&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;调整每一列显示图标数量，7 表示每一列显示7个，在我的电脑上，7个个人觉得比较不错&lt;br&gt;&lt;code&gt;defaults write com.apple.dock springboard-rows -int 7&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;调整每一行显示图标数量，这里我用的是8&lt;br&gt;&lt;code&gt;defaults write com.apple.dock springboard-columns -int 8&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;调整每一列显示图标数量，7 表示每一列显示7个&lt;br&gt;&lt;code&gt;defaults write com.apple.dock springboard-rows -int 7&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;由于修改了每一页显示图标数量，可能需要重置Launchpad&lt;br&gt;&lt;code&gt;defaults write com.apple.dock ResetLaunchPad -bool TRUE;killall Dock&lt;/code&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id=&quot;让Dock自动-显示-隐藏-不再有延迟&quot;&gt;&lt;a href=&quot;#让Dock自动-显示-隐藏-不再有延迟&quot; class=&quot;headerlink&quot; title=&quot;让Dock自动 显示/隐藏 不再有延迟&quot;&gt;&lt;/a&gt;让Dock自动 显示/隐藏 不再有延迟&lt;/h2&gt;&lt;p&gt;可能很多朋友使用Mac的时候都会选择将Dock隐藏（可以在系统偏好设置-Dock中选择），等到使用的时候将光标向下一划Dock就会自动弹出显示了。这个显示或者隐藏会有一点点（似乎1秒左右）的延迟，使用下面的方法可以消除这个延迟：&lt;/p&gt;
 &lt;p&gt;打开  应用程序-实用工具-终端&lt;br&gt;输入如下代码并回车：&lt;br&gt;    &lt;code&gt;defaults write com.apple.Dock autohide-delay -float 0 &amp;amp;&amp;amp; killall Dock&lt;/code&gt;&lt;br&gt;这样当Dock再次隐藏或者显示的时候就会立即执行的&lt;br&gt;如果想要恢复原来默认的延迟速度，就在终端输入如下代码并回车即可：&lt;br&gt;    &lt;code&gt;defaults delete com.apple.Dock autohide-delay &amp;amp;&amp;amp; killall Dock&lt;/code&gt;&lt;br&gt;看过网上一些文章技巧提到在终端用如下命令即可使Dock栏无延时弹出：&lt;br&gt;    &lt;code&gt;defaults write com.apple.Dock autohide-delay -float 0 &amp;amp;&amp;amp; killallDock&lt;/code&gt;&lt;br&gt;但实际上试验后发现并不起效果，甚是苦恼，且注销后再用&lt;br&gt;    &lt;code&gt;defaults read com.apple.Dock autohide-delay&lt;/code&gt;&lt;br&gt;发现这个值并不存在。&lt;/p&gt;
-&lt;p&gt;后来多方试验并查询国外网站后发现关键点是要把float改为int即可，即使用如下命令：&lt;br&gt;    &lt;code&gt;defaults write com.apple.Dock autohide-delay -int 0 &amp;amp;&amp;amp; killall Dock&lt;/code&gt;&lt;br&gt;另外这个只是改善了弹出前的延时速度，若要改善弹出及隐藏的过程的动画的速度，则使用如下命令（这个命令在国内的网站上搜索不到）：&lt;br&gt;    &lt;code&gt;defaults write com.apple.dock autohide-time-modifier -int 0; killall Dock&lt;/code&gt;&lt;br&gt;以上命令将时间设置为0，将无动画效果，瞬间显示Dock栏。&lt;br&gt;我本人使用的是0.3秒：&lt;br&gt;    &lt;code&gt;defaults write com.apple.dock autohide-time-modifier -float 0.3;killall Dock&lt;/code&gt;&lt;br&gt;总结一下就是当要设置为0值时，需要用int，用小数时需要用float。&lt;br&gt;autohide-delay和autohide-time-modifier分别控制弹出前的延时和弹出动画的时间。&lt;/p&gt;
+&lt;p&gt;后来多方试验并查询国外网站后发现关键点是要把float改为int即可，即使用如下命令：&lt;br&gt;    &lt;code&gt;defaults write com.apple.Dock autohide-delay -int 0 &amp;amp;&amp;amp; killall Dock&lt;/code&gt;&lt;br&gt;另外这个只是改善了弹出前的延时速度，若要改善弹出及隐藏的过程的动画的速度，则使用如下命令（这个命令在国内的网站上搜索不到）：&lt;br&gt;    &lt;code&gt;defaults write com.apple.dock autohide-time-modifier -int 0; killall Dock&lt;/code&gt;&lt;br&gt;以上命令将时间设置为0，将无动画效果，瞬间显示Dock栏。&lt;br&gt;可以改动画时间，例如0.3秒：&lt;br&gt;    &lt;code&gt;defaults write com.apple.dock autohide-time-modifier -float 0.3;killall Dock&lt;/code&gt;&lt;br&gt;总结一下就是当要设置为0值时，需要用int，用小数时需要用float。&lt;br&gt;&lt;strong&gt;&lt;em&gt;autohide-delay&lt;/em&gt;&lt;/strong&gt;和&lt;strong&gt;autohide-time-modifier&lt;/strong&gt;分别控制弹出前的延时和弹出动画的时间。&lt;/p&gt;
 </content>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;Mac系统调整Launchpad图标大小&quot;&gt;&lt;a href=&quot;#Mac系统调整Launchpad图标大小&quot; class=&quot;headerlink&quot; title=&quot;Mac系统调整Launchpad图标大小&quot;&gt;&lt;/a&gt;Mac系统调整Launchpad图标大小&lt;/h2&gt;&lt;
+      &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h2 id=&quot;Mac系统调整Launchpad图标大小&quot;&gt;&lt;a href=&quot;#Mac系统调整Launchpad图标大小&quot; class=&quot;headerlink&quot; title=&quot;Mac系统调整Launchpad图标大小&quot;&gt;&lt;/a&gt;Mac系统调整L
     
     </summary>
     
@@ -49,9 +50,10 @@
     <link href="http://zjw7sky.github.io/2016/06/02/NSString%E5%BC%95%E7%94%A8%E8%AE%A1%E6%95%B0%E5%B0%8F%E8%AE%A1/"/>
     <id>http://zjw7sky.github.io/2016/06/02/NSString引用计数小计/</id>
     <published>2016-06-02T09:54:02.000Z</published>
-    <updated>2016-06-02T09:56:02.000Z</updated>
+    <updated>2016-06-03T00:39:29.000Z</updated>
     
-    <content type="html">&lt;ul&gt;
+    <content type="html">&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;ul&gt;
 &lt;li&gt;&lt;p&gt;字符串常量引用计数 &lt;strong&gt;-1&lt;/strong&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;//引用计数为-1
 NSString *test1 = @&amp;quot;&amp;quot;;
@@ -60,19 +62,21 @@ NSString *test3 = [NSString stringWithFormat:@&amp;quot;test&amp;quot;];
 &lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;ul&gt;
-&lt;li&gt;字符串变量引用计数 符合NSObject的引用计数规则&lt;/li&gt;
-&lt;/ul&gt;
+&lt;li&gt;&lt;p&gt;字符串变量引用计数 符合NSObject的引用计数规则&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;//引用计数为1
 NSString *test4 = [NSString stringWithString:[NSString stringWithFormat:@&amp;quot;test-%d&amp;quot;,4]];
-&lt;/code&gt;&lt;/pre&gt;</content>
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
     
     <summary type="html">
     
-      &lt;ul&gt;
+      &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;ul&gt;
 &lt;li&gt;&lt;p&gt;字符串常量引用计数 &lt;strong&gt;-1&lt;/strong&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;//引用计数为-1
 NSString *test1 = @&amp;quot;&amp;quot;;
-NSString *test2 = [[NSString alloc]init]
+NSString *test2 = [[NS
     
     </summary>
     
