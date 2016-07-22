@@ -4,6 +4,52 @@
   
     
     <entry>
+      <title><![CDATA[Hexo使用]]></title>
+      <url>http://zjw7sky.github.io/2016/07/22/Hexo%E4%BD%BF%E7%94%A8/</url>
+      <content type="html"><![CDATA[<a id="more"></a>
+<p>虽然用了<strong><a href="https://hexo.io/zh-cn/" target="_blank" rel="external">hexo</a></strong>+<strong><a href="https://github.com/" target="_blank" rel="external">github</a></strong>搞了博客，但是总是忘记一些命令，这里记一下。</p>
+<ul>
+<li>new 新建一篇文章。</li>
+</ul>
+<p><code>$ hexo new name</code></p>
+<ul>
+<li>generate 生成静态文件。</li>
+</ul>
+<p><code>$ hexo generate</code></p>
+<ul>
+<li>publish 发表草稿。</li>
+</ul>
+<p><code>$ hexo publish [layout] &lt;filename&gt;</code></p>
+<ul>
+<li>server 启动服务器。默认情况下，访问网址为： <a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a> </li>
+</ul>
+<p><code>$ hexo server</code></p>
+<ul>
+<li>deploy 部署网站。</li>
+</ul>
+<p><code>$ hexo deploy</code></p>
+<ul>
+<li>clean 清除缓存文件 (db.json) 和已生成的静态文件 (public)。</li>
+</ul>
+<p><code>$ hexo clean</code></p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[iOS开发知识小集]]></title>
+      <url>http://zjw7sky.github.io/2016/07/22/iOS%E5%BC%80%E5%8F%91%E7%9F%A5%E8%AF%86%E5%B0%8F%E9%9B%86/</url>
+      <content type="html"><![CDATA[<a id="more"></a>
+<ul>
+<li>装逼初始化对象</li>
+</ul>
+<pre><code>NSObject *obj = ({
+    NSObject *o = [NSObject new];
+    o;
+});
+</code></pre>]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[HTTP相关内容整理]]></title>
       <url>http://zjw7sky.github.io/2016/06/08/HTTP%20Header%E6%95%B4%E7%90%86/</url>
       <content type="html"><![CDATA[<p>最近在弄网络库封装，接触到一些HTTP相关问题，网络上搜索有些乱，就做了些整理。</p>

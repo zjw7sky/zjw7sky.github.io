@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zjw7sky.github.io/"/>
-  <updated>2016-07-20T02:30:02.000Z</updated>
+  <updated>2016-07-22T01:13:24.000Z</updated>
   <id>http://zjw7sky.github.io/</id>
   
   <author>
@@ -14,6 +14,87 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hexo使用</title>
+    <link href="http://zjw7sky.github.io/2016/07/22/Hexo%E4%BD%BF%E7%94%A8/"/>
+    <id>http://zjw7sky.github.io/2016/07/22/Hexo使用/</id>
+    <published>2016-07-22T00:57:34.000Z</published>
+    <updated>2016-07-22T01:13:24.000Z</updated>
+    
+    <content type="html">&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;p&gt;虽然用了&lt;strong&gt;&lt;a href=&quot;https://hexo.io/zh-cn/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;hexo&lt;/a&gt;&lt;/strong&gt;+&lt;strong&gt;&lt;a href=&quot;https://github.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;github&lt;/a&gt;&lt;/strong&gt;搞了博客，但是总是忘记一些命令，这里记一下。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;new 新建一篇文章。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;$ hexo new name&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;generate 生成静态文件。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;$ hexo generate&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;publish 发表草稿。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;$ hexo publish [layout] &amp;lt;filename&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;server 启动服务器。默认情况下，访问网址为： &lt;a href=&quot;http://localhost:4000/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://localhost:4000/&lt;/a&gt; &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;$ hexo server&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;deploy 部署网站。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;$ hexo deploy&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;clean 清除缓存文件 (db.json) 和已生成的静态文件 (public)。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;$ hexo clean&lt;/code&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;p&gt;虽然用了&lt;strong&gt;&lt;a href=&quot;https://hexo.io/zh-cn/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;hexo&lt;/a&gt;&lt;/strong&gt;+&lt;strong&gt;&lt;a href=&quot;https://
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>iOS开发知识小集</title>
+    <link href="http://zjw7sky.github.io/2016/07/22/iOS%E5%BC%80%E5%8F%91%E7%9F%A5%E8%AF%86%E5%B0%8F%E9%9B%86/"/>
+    <id>http://zjw7sky.github.io/2016/07/22/iOS开发知识小集/</id>
+    <published>2016-07-22T00:46:46.000Z</published>
+    <updated>2016-07-22T01:09:26.000Z</updated>
+    
+    <content type="html">&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;装逼初始化对象&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;NSObject *obj = ({
+    NSObject *o = [NSObject new];
+    o;
+});
+&lt;/code&gt;&lt;/pre&gt;</content>
+    
+    <summary type="html">
+    
+      &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;装逼初始化对象&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;NSObject *obj = ({
+    NSObject *o = [NSObject new];
+    o;
+});
+&lt;/code&gt;&lt;/pre&gt;
+    
+    </summary>
+    
+      <category term="iOS" scheme="http://zjw7sky.github.io/categories/iOS/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>HTTP相关内容整理</title>
