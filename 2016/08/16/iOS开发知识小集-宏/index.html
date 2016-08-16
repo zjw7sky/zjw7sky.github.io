@@ -84,43 +84,22 @@
 
 
 
-<meta name="description" content="字符串常量引用计数 -1
-//引用计数为-1
-NSString *test1 = @&amp;quot;&amp;quot;;
-NSString *test2 = [[NSString alloc]init];
-NSString *test3 = [NSString stringWithFormat:@&amp;quot;test&amp;quot;];
+<meta name="description" content="单例 — 宏
 
-
-
-字符串变量引用计数 符合NSObject的引用计数规则
-//引用">
+1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889909192939495// 帮助实现单例">
 <meta property="og:type" content="article">
-<meta property="og:title" content="NSString引用计数小计">
-<meta property="og:url" content="http://zjw7sky.github.io/2016/06/02/NSString引用计数小计/index.html">
+<meta property="og:title" content="iOS开发知识小集-宏">
+<meta property="og:url" content="http://zjw7sky.github.io/2016/08/16/iOS开发知识小集-宏/index.html">
 <meta property="og:site_name" content="zjw7sky">
-<meta property="og:description" content="字符串常量引用计数 -1
-//引用计数为-1
-NSString *test1 = @&amp;quot;&amp;quot;;
-NSString *test2 = [[NSString alloc]init];
-NSString *test3 = [NSString stringWithFormat:@&amp;quot;test&amp;quot;];
+<meta property="og:description" content="单例 — 宏
 
-
-
-字符串变量引用计数 符合NSObject的引用计数规则
-//引用">
-<meta property="og:updated_time" content="2016-06-03T01:01:47.000Z">
+1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889909192939495// 帮助实现单例">
+<meta property="og:updated_time" content="2016-08-16T08:32:34.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="NSString引用计数小计">
-<meta name="twitter:description" content="字符串常量引用计数 -1
-//引用计数为-1
-NSString *test1 = @&amp;quot;&amp;quot;;
-NSString *test2 = [[NSString alloc]init];
-NSString *test3 = [NSString stringWithFormat:@&amp;quot;test&amp;quot;];
+<meta name="twitter:title" content="iOS开发知识小集-宏">
+<meta name="twitter:description" content="单例 — 宏
 
-
-
-字符串变量引用计数 符合NSObject的引用计数规则
-//引用">
+1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889909192939495// 帮助实现单例">
 
 
 
@@ -138,7 +117,7 @@ NSString *test3 = [NSString stringWithFormat:@&amp;quot;test&amp;quot;];
   };
 </script>
 
-  <title> NSString引用计数小计 | zjw7sky </title>
+  <title> iOS开发知识小集-宏 | zjw7sky </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -301,7 +280,7 @@ NSString *test3 = [NSString stringWithFormat:@&amp;quot;test&amp;quot;];
             
             
               
-                NSString引用计数小计
+                iOS开发知识小集-宏
               
             
           </h1>
@@ -313,8 +292,8 @@ NSString *test3 = [NSString stringWithFormat:@&amp;quot;test&amp;quot;];
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-06-02T17:54:02+08:00" content="2016-06-02">
-              2016-06-02
+            <time itemprop="dateCreated" datetime="2016-08-16T16:19:45+08:00" content="2016-08-16">
+              2016-08-16
             </time>
           </span>
 
@@ -343,8 +322,8 @@ NSString *test3 = [NSString stringWithFormat:@&amp;quot;test&amp;quot;];
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/06/02/NSString引用计数小计/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/02/NSString引用计数小计/" itemprop="commentsCount"></span>
+                <a href="/2016/08/16/iOS开发知识小集-宏/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/16/iOS开发知识小集-宏/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -374,19 +353,9 @@ NSString *test3 = [NSString stringWithFormat:@&amp;quot;test&amp;quot;];
       
         <a id="more"></a>
 <ul>
-<li><p>字符串常量引用计数 <strong>-1</strong></p>
-<pre><code>//引用计数为-1
-NSString *test1 = @&quot;&quot;;
-NSString *test2 = [[NSString alloc]init];
-NSString *test3 = [NSString stringWithFormat:@&quot;test&quot;];
-</code></pre></li>
+<li>单例 — 宏</li>
 </ul>
-<ul>
-<li><p>字符串变量引用计数 符合NSObject的引用计数规则</p>
-<pre><code>//引用计数为1
-NSString *test4 = [NSString stringWithString:[NSString stringWithFormat:@&quot;test-%d&quot;,4]];
-</code></pre></li>
-</ul>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 帮助实现单例设计模式</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// .h文件的实现</span></span><br><span class="line"><span class="meta">#define SingletonH(methodName) + (instancetype)shared##methodName;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// .m文件的实现</span></span><br><span class="line"><span class="meta">#if __has_feature(objc_arc) // 是ARC</span></span><br><span class="line"><span class="meta">#define SingletonM(methodName) \</span></span><br><span class="line"><span class="keyword">static</span> <span class="keyword">id</span> _instace = <span class="literal">nil</span>; \</span><br><span class="line">+ (<span class="keyword">id</span>)allocWithZone:(<span class="keyword">struct</span> _NSZone *)zone \</span><br><span class="line">&#123; \</span><br><span class="line"><span class="keyword">if</span> (_instace == <span class="literal">nil</span>) &#123; \</span><br><span class="line"><span class="keyword">static</span> <span class="built_in">dispatch_once_t</span> onceToken; \</span><br><span class="line"><span class="built_in">dispatch_once</span>(&amp;onceToken, ^&#123; \</span><br><span class="line">_instace = [<span class="keyword">super</span> allocWithZone:zone]; \</span><br><span class="line">&#125;); \</span><br><span class="line">&#125; \</span><br><span class="line"><span class="keyword">return</span> _instace; \</span><br><span class="line">&#125; \</span><br><span class="line">\</span><br><span class="line">- (<span class="keyword">id</span>)init \</span><br><span class="line">&#123; \</span><br><span class="line"><span class="keyword">static</span> <span class="built_in">dispatch_once_t</span> onceToken; \</span><br><span class="line"><span class="built_in">dispatch_once</span>(&amp;onceToken, ^&#123; \</span><br><span class="line">_instace = [<span class="keyword">super</span> init]; \</span><br><span class="line">&#125;); \</span><br><span class="line"><span class="keyword">return</span> _instace; \</span><br><span class="line">&#125; \</span><br><span class="line">\</span><br><span class="line">+ (instancetype)shared<span class="meta">##methodName \</span></span><br><span class="line">&#123; \</span><br><span class="line"><span class="keyword">return</span> [[<span class="keyword">self</span> alloc] init]; \</span><br><span class="line">&#125; \</span><br><span class="line">+ (<span class="keyword">id</span>)copyWithZone:(<span class="keyword">struct</span> _NSZone *)zone \</span><br><span class="line">&#123; \</span><br><span class="line"><span class="keyword">return</span> _instace; \</span><br><span class="line">&#125; \</span><br><span class="line">\</span><br><span class="line">+ (<span class="keyword">id</span>)mutableCopyWithZone:(<span class="keyword">struct</span> _NSZone *)zone \</span><br><span class="line">&#123; \</span><br><span class="line"><span class="keyword">return</span> _instace; \</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">#else // 不是ARC</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#define SingletonM(methodName) \</span></span><br><span class="line"><span class="keyword">static</span> <span class="keyword">id</span> _instace = <span class="literal">nil</span>; \</span><br><span class="line">+ (<span class="keyword">id</span>)allocWithZone:(<span class="keyword">struct</span> _NSZone *)zone \</span><br><span class="line">&#123; \</span><br><span class="line"><span class="keyword">if</span> (_instace == <span class="literal">nil</span>) &#123; \</span><br><span class="line"><span class="keyword">static</span> <span class="built_in">dispatch_once_t</span> onceToken; \</span><br><span class="line"><span class="built_in">dispatch_once</span>(&amp;onceToken, ^&#123; \</span><br><span class="line">_instace = [<span class="keyword">super</span> allocWithZone:zone]; \</span><br><span class="line">&#125;); \</span><br><span class="line">&#125; \</span><br><span class="line"><span class="keyword">return</span> _instace; \</span><br><span class="line">&#125; \</span><br><span class="line">\</span><br><span class="line">- (<span class="keyword">id</span>)init \</span><br><span class="line">&#123; \</span><br><span class="line"><span class="keyword">static</span> <span class="built_in">dispatch_once_t</span> onceToken; \</span><br><span class="line"><span class="built_in">dispatch_once</span>(&amp;onceToken, ^&#123; \</span><br><span class="line">_instace = [<span class="keyword">super</span> init]; \</span><br><span class="line">&#125;); \</span><br><span class="line"><span class="keyword">return</span> _instace; \</span><br><span class="line">&#125; \</span><br><span class="line">\</span><br><span class="line">+ (instancetype)shared<span class="meta">##methodName \</span></span><br><span class="line">&#123; \</span><br><span class="line"><span class="keyword">return</span> [[<span class="keyword">self</span> alloc] init]; \</span><br><span class="line">&#125; \</span><br><span class="line">\</span><br><span class="line">- (<span class="keyword">oneway</span> <span class="keyword">void</span>)release \</span><br><span class="line">&#123; \</span><br><span class="line">\</span><br><span class="line">&#125; \</span><br><span class="line">\</span><br><span class="line">- (<span class="keyword">id</span>)retain \</span><br><span class="line">&#123; \</span><br><span class="line"><span class="keyword">return</span> <span class="keyword">self</span>; \</span><br><span class="line">&#125; \</span><br><span class="line">\</span><br><span class="line">- (<span class="built_in">NSUInteger</span>)retainCount \</span><br><span class="line">&#123; \</span><br><span class="line"><span class="keyword">return</span> <span class="number">1</span>; \</span><br><span class="line">&#125; \</span><br><span class="line">+ (<span class="keyword">id</span>)copyWithZone:(<span class="keyword">struct</span> _NSZone *)zone \</span><br><span class="line">&#123; \</span><br><span class="line">    <span class="keyword">return</span> _instace; \</span><br><span class="line">&#125; \</span><br><span class="line"> \</span><br><span class="line">+ (<span class="keyword">id</span>)mutableCopyWithZone:(<span class="keyword">struct</span> _NSZone *)zone \</span><br><span class="line">&#123; \</span><br><span class="line">    <span class="keyword">return</span> _instace; \</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -411,17 +380,13 @@ NSString *test4 = [NSString stringWithString:[NSString stringWithFormat:@&quot;t
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/06/01/Hello Blog/" rel="next" title="Hello Blog">
-                <i class="fa fa-chevron-left"></i> Hello Blog
+              <a href="/2016/07/22/Hexo使用/" rel="next" title="Hexo使用">
+                <i class="fa fa-chevron-left"></i> Hexo使用
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/06/02/Mac使用小技巧/" rel="prev" title="Mac使用小技巧">
-                Mac使用小技巧 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -485,8 +450,8 @@ NSString *test4 = [NSString stringWithString:[NSString stringWithFormat:@&quot;t
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/06/02/NSString引用计数小计/"
-           data-title="NSString引用计数小计" data-url="http://zjw7sky.github.io/2016/06/02/NSString引用计数小计/">
+      <div class="ds-thread" data-thread-key="2016/08/16/iOS开发知识小集-宏/"
+           data-title="iOS开发知识小集-宏" data-url="http://zjw7sky.github.io/2016/08/16/iOS开发知识小集-宏/">
       </div>
     
   </div>
