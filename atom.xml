@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zjw7sky.github.io/"/>
-  <updated>2016-08-16T08:32:34.000Z</updated>
+  <updated>2016-09-06T06:26:27.000Z</updated>
   <id>http://zjw7sky.github.io/</id>
   
   <author>
@@ -14,6 +14,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Jenkins 使用</title>
+    <link href="http://zjw7sky.github.io/2016/09/01/Jenkins%20%E4%BD%BF%E7%94%A8/"/>
+    <id>http://zjw7sky.github.io/2016/09/01/Jenkins 使用/</id>
+    <published>2016-09-01T04:00:00.000Z</published>
+    <updated>2016-09-06T06:26:27.000Z</updated>
+    
+    <content type="html">&lt;ul&gt;
+&lt;li&gt;启动和关闭&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight stylus&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;启动&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;sudo launchctl load -w /Library/LaunchDaemons/org&lt;span class=&quot;selector-class&quot;&gt;.jenkins-ci&lt;/span&gt;&lt;span class=&quot;selector-class&quot;&gt;.plist&lt;/span&gt; &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;关闭&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;sudo launchctl unload -w /Library/LaunchDaemons/org&lt;span class=&quot;selector-class&quot;&gt;.jenkins-ci&lt;/span&gt;&lt;span class=&quot;selector-class&quot;&gt;.plist&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;ul&gt;
+&lt;li&gt;启动和关闭&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight stylus&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/
+    
+    </summary>
+    
+      <category term="Other" scheme="http://zjw7sky.github.io/categories/Other/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>iOS开发知识小集-宏</title>

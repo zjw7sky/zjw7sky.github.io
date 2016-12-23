@@ -4,6 +4,16 @@
   
     
     <entry>
+      <title><![CDATA[Jenkins 使用]]></title>
+      <url>http://zjw7sky.github.io/2016/09/01/Jenkins%20%E4%BD%BF%E7%94%A8/</url>
+      <content type="html"><![CDATA[<ul>
+<li>启动和关闭</li>
+</ul>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">启动</div><div class="line">sudo launchctl load -w /Library/LaunchDaemons/org<span class="selector-class">.jenkins-ci</span><span class="selector-class">.plist</span> </div><div class="line">关闭</div><div class="line">sudo launchctl unload -w /Library/LaunchDaemons/org<span class="selector-class">.jenkins-ci</span><span class="selector-class">.plist</span></div></pre></td></tr></table></figure>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[iOS开发知识小集-宏]]></title>
       <url>http://zjw7sky.github.io/2016/08/16/iOS%E5%BC%80%E5%8F%91%E7%9F%A5%E8%AF%86%E5%B0%8F%E9%9B%86-%E5%AE%8F/</url>
       <content type="html"><![CDATA[<a id="more"></a>
